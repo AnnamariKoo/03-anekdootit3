@@ -18,9 +18,11 @@ const Button = ({ handleClick, text }) => (
 const BestAnecdote = (props) => {
   return (
     <>
-      <h1>Anecdote with most votes</h1>
-      <div> {props.anecdotes[props.bestIndex]} </div>
-      <p>has {props.bestVotes} votes</p>
+      <article>
+        <h1>Anecdote with most votes</h1>
+        <p> {props.anecdotes[props.bestIndex]}</p>
+        <p>has {props.bestVotes} votes</p>
+      </article>
     </>
   );
 };
@@ -54,7 +56,7 @@ const App = () => {
 
   return (
     <>
-      <article>
+      <section>
         <Anecdote anecdotes={anecdotes} selected={selected} points={points} />
         <Button handleClick={voteClick} text="vote" />
         <Button handleClick={randomClick} text="next anecdote" />
@@ -63,7 +65,7 @@ const App = () => {
           bestIndex={bestIndex}
           bestVotes={bestVotes}
         />
-      </article>
+      </section>
     </>
   );
 };

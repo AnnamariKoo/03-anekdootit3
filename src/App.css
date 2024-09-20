@@ -9,7 +9,7 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-article {
+section {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
@@ -18,8 +18,13 @@ article {
   border-radius: 10px;
 }
 
+article {
+  margin-top: 1rem;
+  border-top: solid 1px rgb(85, 124, 71);
+}
 h1 {
   padding: 1rem;
+  font-size: 20px;
 }
 
 p,
