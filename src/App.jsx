@@ -1,10 +1,11 @@
 import { useState } from "react";
+import "./App.css";
 
 const Anecdote = (props) => {
   return (
     <>
       <h1>Anecdote of the day</h1>
-      <div>{props.anecdotes[props.selected]}</div>
+      <p>{props.anecdotes[props.selected]}</p>
       <p>has {props.points[props.selected]} votes</p>
     </>
   );
@@ -53,14 +54,16 @@ const App = () => {
 
   return (
     <>
-      <Anecdote anecdotes={anecdotes} selected={selected} points={points} />
-      <Button handleClick={voteClick} text="vote" />
-      <Button handleClick={randomClick} text="next anecdote" />
-      <BestAnecdote
-        anecdotes={anecdotes}
-        bestIndex={bestIndex}
-        bestVotes={bestVotes}
-      />
+      <article>
+        <Anecdote anecdotes={anecdotes} selected={selected} points={points} />
+        <Button handleClick={voteClick} text="vote" />
+        <Button handleClick={randomClick} text="next anecdote" />
+        <BestAnecdote
+          anecdotes={anecdotes}
+          bestIndex={bestIndex}
+          bestVotes={bestVotes}
+        />
+      </article>
     </>
   );
 };
